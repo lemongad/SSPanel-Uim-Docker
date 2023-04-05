@@ -37,7 +37,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --no-interaction --no-plugins --no-scripts && \
     rm -rf /root/.composer
 
-# Change owner of the /www/SSPanel-Uim directory
+RUN usermod -u 1000 www-data
+
 RUN chown -R www-data:www-data ${SITE_PATH} && \
     chmod -R 755 ${SITE_PATH}
 

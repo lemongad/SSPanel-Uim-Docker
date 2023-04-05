@@ -41,6 +41,10 @@ RUN composer install --no-dev --no-interaction --no-plugins --no-scripts && \
 RUN chown -R www-data:www-data ${SITE_PATH} && \
     chmod -R 755 ${SITE_PATH}
 
+RUN mkdir -p ${SITE_PATH}/public && \
+    chown -R www-data:www-data ${SITE_PATH}/config/ && \
+    chmod -R 755 ${SITE_PATH}/config/ && \
+
 COPY supervisord.conf /etc/supervisord.conf
 # COPY start.sh /usr/local/bin/start.sh
 COPY firstup.sh ${SITE_PATH}/firstup.sh

@@ -1,0 +1,12 @@
+:80 {
+	root * /www/SSPanel-Uim/public
+	file_server
+
+	php_fastcgi 127.0.0.1:9000 {
+		index index.php
+	}
+
+	# rewrite / {
+	# 	to /index.php?{query}
+	# }
+}

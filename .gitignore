@@ -1,0 +1,6 @@
+.env
+config/
+mariadb*/
+storage/
+docker-compose.yml
+SSPanel-Uim/

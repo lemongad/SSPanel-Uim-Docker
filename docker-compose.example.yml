@@ -16,7 +16,7 @@ services:
       - ./config/.config.php:/www/SSPanel-Uim/config/.config.php
       - ./config/appprofile.php:/www/SSPanel-Uim/config/appprofile.php
       # - ./storage/:/www/SSPanel-Uim/storage/
-      - ./mariadb/:/srv/mariadb/  # 用于使用 /srv/mariadb/mysqld.sock 连接数据库
+      - ./log/:/var/log/
     depends_on:
       - mariadb
 
@@ -34,4 +34,3 @@ services:
       - MYSQL_PASSWORD=${DB_SSPANEL_PWD}
     volumes:
       - ./mariadb_data:/var/lib/mysql
-      - ./mariadb:/var/run/mysqld   # 提供 sock 到 ./mariadb/mysqld.sock

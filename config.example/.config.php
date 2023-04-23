@@ -15,8 +15,8 @@ $_ENV['muKey']      = 'ChangeMe';                      //WebAPI密钥，用于�
 // db_host 例: localhost（可解析的主机名）, 127.0.0.1（IP 地址）, 10.0.0.2:4406（含端口)
 // db_socket 例：/var/run/mysqld/mysqld.sock（需使用绝对地址）
 $_ENV['db_driver']    = 'mysql';
-$_ENV['db_host']      = '';                     //数据库地址无需再设置了
-$_ENV['db_socket']    = '/srv/mariadb/mysqld.sock';
+$_ENV['db_host']      = 'mariadb';
+$_ENV['db_socket']    = '';
 $_ENV['db_database']  = 'sspanel';              //数据库名，无需更改
 $_ENV['db_username']  = 'sspanel';              //数据库用户名，无需更改
 $_ENV['db_password']  = '12345678';             //用户名对应的密码，和.env中的DB_SSPANEL_PWD一致

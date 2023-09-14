@@ -3,7 +3,7 @@ version: '3'
 services:
   sspanel:
     # build: .    # <---- 如果需要最新代码，取消本行注释并注释下面一行
-    image: ghcr.io/kleinrui/sspanel-uim:latest
+    image: ghcr.io/lemongad/sspanel-uim:latest
     container_name: sspanel
     restart: always
     network_mode: bridge

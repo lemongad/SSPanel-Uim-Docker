@@ -4,6 +4,7 @@ ENV SITE_PATH /www/SSPanel-Uim
 ENV PHP_VERSION 81
 
 RUN apk update && apk add \
+    shadow \
     caddy \
     supervisor \
     curl \
